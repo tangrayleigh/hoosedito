@@ -1,0 +1,51 @@
+body {
+	font-family: 'Permanent Marker', cursive;
+	font-size: 16px;
+	margin: 0 auto;
+	max-width: 980px;
+}
+
+header {
+	font-size: 32px;
+	font-weight: bolder;
+	text-align: center;
+	margin: 2rem;
+}
+
+.buttonWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button{
+	box-shadow: 3px 4px 0px 0px #899599;
+	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+	background-color:#ededed;
+	border-radius:15px;
+	border:1px solid #d6bcd6;
+	display:block;
+	cursor:pointer;
+	color:#3a8a9e;
+	font-family: inherit;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
+}
+.button:hover {
+	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+	background-color:#bab1ba;
+}
+.button:active {
+	border: none;
+	position:relative;
+	top:1px;
+}
+.button:focus {
+	outline: 0;
+}
+
+#gameContainer {
+	display: none;
+}

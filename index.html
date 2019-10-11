@@ -6,6 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Crystal Collector</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -13,23 +18,44 @@
 		<h1>Crystal Collector</h1>
 	</header>
 	<main>
-		<div id="instructions">
-			<p>A random number will be generated at the start of the game.<br>There are 4 crystals below. By clicking on a crystal you will add a specific amount of points to your total score.<br>You Win the the game by matching your total score to the random number. You lose the game if your total score goes above the random number.<br>The value of each crystal is hidden from you until clicked.<br>Each time the game starts, the game will change the values of each crystal.</p>
+		<div class="buttonWrapper">
+			<button id="playBtn" class="button">PLAY</button>
 		</div>
-		<div id="gameBox">
-			<div id="randomNum"></div>
-			<div id="scoreBoard"></div>
-			<div class="crystals">
-				<div id="crystal1"></div>
-				<div id="crystal2"></div>
-				<div id="crystal3"></div>
-				<div id="crystal4"></div>
+		<div id="gameContainer">
+			<div id="instructions">
+				<p id="rules">A random number will be generated at the start of the game.<br>There are 4 crystals below. By clicking on a crystal you will add a specific amount of points to your total score.<br>You Win the the game by matching your total score to the random number. You lose the game if your total score goes above the random number.<br>The value of each crystal is hidden from you until clicked.<br>Each time the game starts, the game will change the values of each crystal.</p>
 			</div>
-			<div id="playerNum"></div>
-			<div id="crystalNum"></div>
-		</div>
+			<div id="gameBox">
 
+				<h4>Crystal Number</h4>
+				<div id="crystalRanNum"></div>
+
+				<h4>Player Number</h4>
+				<div id="playerTotal"></div>
+
+
+				<div id="c0" class="crystal">c1</div>
+
+				<div id="c1" class="crystal">c2</div>
+
+				<div id="c2" class="crystal">c3</div>
+
+				<div id="c3" class="crystal">c4</div>
+
+				<div id="wins"></div>
+				<div id="losses"></div>
+
+				<div id="leaderBoard">
+					<ol>
+						<li></li>
+					</ol>
+				</div>
+
+			</div>
+		</div>
 	</main>
+	<script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="assets/javascript/game.js"></script>
 </body>
 
 </html>
