@@ -43,7 +43,7 @@ $(document).ready(function () {
 			$('#wins').text('WINS - ' + wins);
 			$('#losses').text(losses + ' - LOSSES');
 			$('#playerTotal').text(playerTotal);
-
+			$('#crystalRanNum').text(crystalRanNum);
 		}
 
 		function resetValues() {
