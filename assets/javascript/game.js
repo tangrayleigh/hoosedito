@@ -40,6 +40,7 @@ $(document).ready(function () {
 			wins = 0;
 			losses = 0;
 			playerTotal = 0;
+			crystalRanNum = (Math.floor(Math.random() * 102) + 19);
 			$('#wins').text('WINS - ' + wins);
 			$('#losses').text(losses + ' - LOSSES');
 			$('#playerTotal').text(playerTotal);
