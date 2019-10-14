@@ -15,6 +15,12 @@ $(document).ready(function () {
 		function displayGame() {
 			$('#gameContainer').delay(1000).fadeIn(1000);
 		};
+		// ------->
+		// function displayRules() {
+		// 	$('#fas').on('click', function () {
+		// 		$('#howToPlay').
+		// 	})
+		// }
 
 		function resetValues() {
 			crystalRanNum = (Math.floor(Math.random() * 102) + 19);
@@ -26,8 +32,8 @@ $(document).ready(function () {
 		};
 
 		function updateScoreValues() {
-			$('#wins').text('Wins: ' + wins);
-			$('#losses').text('Losses: ' + losses);
+			$('#wins').text('WINS - ' + wins);
+			$('#losses').text(losses + ' - LOSSES');
 			$('#crystalRanNum').text(crystalRanNum);
 			$('#playerTotal').text(playerTotal);
 		};

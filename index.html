@@ -11,6 +11,7 @@
 
 	<link rel="stylesheet" href="assets/css/reset.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="https://kit.fontawesome.com/a5a0fef831.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -18,39 +19,53 @@
 		<h1>Crystal Collector</h1>
 	</header>
 	<main>
-		<div class="buttonWrapper">
-			<button id="playBtn" class="button">PLAY</button>
-		</div>
-		<div id="gameContainer">
-			<div id="instructions">
-				<p id="rules">A random number will be generated at the start of the game.<br>There are 4 crystals below. By clicking on a crystal you will add a specific amount of points to your total score.<br>You Win the the game by matching your total score to the random number. You lose the game if your total score goes above the random number.<br>The value of each crystal is hidden from you until clicked.<br>Each time the game starts, the game will change the values of each crystal.</p>
+		<div class="gameBox">
+			<div class="buttonWrapper">
+				<button id="playBtn" class="button">PLAY</button>
 			</div>
-			<div id="gameBox">
+			<div id="gameContainer">
 
-				<h4>Crystal Number</h4>
-				<div id="crystalRanNum"></div>
+				<div class="scoreBoard">
+					<div id="wins" class="score"></div>
+					<div id="help">
+						<i class="fas fa-question"></i>
+					</div>
+					<div id="losses" class="score"></div>
+				</div>
+				<div id="instructions">
+					<h2 id="howToPlay">How To Play</h2>
+					<p id="rules">A random number will be generated at the start of the game. There are 4 crystals below. By clicking on a crystal you will add a specific amount of points to your total score. You Win the the game by matching your total score to the random number. You lose the game if your total score goes above the random number. The value of each crystal is hidden from you until clicked. Each time the game starts, the game will change the values of each crystal.</p>
+				</div>
+				<div class="crystalContainer">
+					<div id="c0" class="crystal">
+						<i class="far fa-gem"></i>
+					</div>
 
-				<h4>Player Number</h4>
-				<div id="playerTotal"></div>
+					<div id="c1" class="crystal">
+						<i class="far fa-gem"></i>
+					</div>
 
+					<div id="c2" class="crystal">
+						<i class="far fa-gem"></i>
+					</div>
 
-				<div id="c0" class="crystal">c1</div>
-
-				<div id="c1" class="crystal">c2</div>
-
-				<div id="c2" class="crystal">c3</div>
-
-				<div id="c3" class="crystal">c4</div>
-
-				<div id="wins"></div>
-				<div id="losses"></div>
-
-				<div id="leaderBoard">
-					<ol>
-						<li></li>
-					</ol>
+					<div id="c3" class="crystal">
+						<i class="far fa-gem"></i>
+					</div>
 				</div>
 
+				<div class="numWrapper">
+					<div class="numContainer">
+						<h3>Player</h3>
+						<div id="playerTotal" class="num"></div>
+						<h3>Number</h3>
+					</div>
+					<div class="numContainer">
+						<h3>Crystal</h3>
+						<div id="crystalRanNum" class="num"></div>
+						<h3>Number</h3>
+					</div>
+				</div>
 			</div>
 		</div>
 	</main>
