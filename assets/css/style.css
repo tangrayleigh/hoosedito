@@ -24,7 +24,7 @@ header {
 }
 
 .button{
-	box-shadow: 3px 4px 0px 0px #899599;
+	box-shadow: -3px 3px 0px 0px #899599;
 	background: linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
 	background-color:#ededed;
 	border-radius: 15px;
@@ -38,15 +38,18 @@ header {
 	text-decoration: none;
 	text-shadow: 0px 1px 0px #e1e2ed;
 }
+
 .button:hover {
 	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
 	background-color:#bab1ba;
 }
+
 .button:active {
 	border: none;
 	position:relative;
 	top:1px;
 }
+
 .button:focus {
 	outline: 0;
 }
@@ -69,25 +72,40 @@ header {
 	align-items: center;
 	justify-content: center;
 	height: 3rem;
+	position: relative;
 }
+
 .score {
 	width: 50%;
 	padding: 0 3rem;
 	font-size: 2rem;
 }
+
 .score:nth-of-type(1) {
 	text-align: end;
 }
+
 .fa-question {
 	color: orange;
-	margin-top: calc(2rem + 4px);
-	font-size: 3rem;
+	margin-top: calc(1rem + 4px);
+	font-size: 2rem;
 	padding: 1rem;
 	border: 2px solid white;
 	background-color: grey;
 	border-radius: 50%;
-		box-shadow: 0 3px 12px 0 rgba(0,0,0,.3);
+	box-shadow: 0 3px 12px 0 rgba(0,0,0,.3);
+}
 
+.fa-times {
+	color: white;
+	border: 2px solid white;
+	border-radius: 50%;
+	box-shadow: 0 3px 12px 0 rgba(0,0,0,.3);
+	position: absolute;
+	top: 0.75rem;
+	right: 1rem;
+	cursor: pointer;
+	padding: 0.25rem;
 }
 
 .crystalContainer,
@@ -99,33 +117,36 @@ header {
 	width: 50%;
 	margin: 2rem 0;
 }
+
 .crystalContainer {
 	float: left;
 	
 }
+
 .crystal {
 	text-align: center;
 	margin: 0.5rem;
 	width: 45%;
 }
+
 .numWrapper {
 	border-left: 2px solid rgba(0,0,0,0.3);
 	float: right;
 }
+
 .numContainer {
 	text-align: center;
 	font-size: 2rem;
 	padding: 2rem 3rem;
 	margin: 0.5rem;
 }
+
 .numContainer > h3 {
 	color: orange;
 	font-size: 1.75rem;
 	margin: 3rem 0;
 }
-.num {
-	/* color: white; */
-}
+
 .fa-gem {
 	background-color: white;
 	border-radius: 1rem;
@@ -134,15 +155,19 @@ header {
 	font-size: 4.25rem;
 	margin: 1rem;
 }
+
 #c0 {
 	color: red;
 }
+
 #c1 {
 	color: blue;
 }
+
 #c2 {
 	color: green;
 }
+
 #c3 {
 	color: purple;
 }
@@ -154,4 +179,23 @@ header {
 
 #instructions {
 	display: none;
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	background-color: grey;
+	font-size: 1rem;
+	padding: 0 2rem 3rem;
+}
+
+#instructions > h2 {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: bolder;
+	padding: 3rem 0 1rem;
+	
+}
+
+#rules {
+	font-size: 1.25rem;
+	line-height: 2.25rem;
+	word-spacing: 5px;
 }

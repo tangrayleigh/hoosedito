@@ -8,19 +8,43 @@ $(document).ready(function () {
 
 		function play() {
 			$('#playBtn').on('click', function () {
-				$('#playBtn').fadeOut(1000, displayGame());
+				$('#playBtn').fadeOut(500, displayGame());
 			});
 		};
 
 		function displayGame() {
-			$('#gameContainer').delay(1000).fadeIn(1000);
+			$('#gameContainer').delay(500).fadeIn(500);
 		};
-		// ------->
-		// function displayRules() {
-		// 	$('#fas').on('click', function () {
-		// 		$('#howToPlay').
-		// 	})
-		// }
+
+		function showRules() {
+			$('.fa-question').on('click', function () {
+				$('#instructions').slideDown(500);
+			})
+		}
+
+		function hideRules() {
+			$('#instructions').on('click', function () {
+				$('#instructions').slideUp(500);
+			})
+		}
+
+		function quitGame() {
+			$('.fa-times').on('click', function () {
+				$('#gameContainer').fadeOut(500, resetGame());
+				$('#playBtn').delay(500).fadeIn(500);
+				$('#instructions').delay(500).hide(0);
+			})
+		}
+
+		function resetGame() {
+			wins = 0;
+			losses = 0;
+			playerTotal = 0;
+			$('#wins').text('WINS - ' + wins);
+			$('#losses').text(losses + ' - LOSSES');
+			$('#playerTotal').text(playerTotal);
+
+		}
 
 		function resetValues() {
 			crystalRanNum = (Math.floor(Math.random() * 102) + 19);
@@ -78,6 +102,9 @@ $(document).ready(function () {
 		resetValues();
 		updateScoreValues();
 		game();
+		showRules();
+		hideRules();
+		quitGame();
 	};
 
 	playGame();
